@@ -32,7 +32,41 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      '@nuxtjs/i18n', {
+        locales: ['en', 'es'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'es',
+          messages: {
+            en: {
+              title: 'Photography',
+              pickalanguage: 'Pick a language',
+              about: 'Where artists create their future. Start sharing your creativity with others around you. Let the world know who you are.',
+              meet: 'Meet our artists',
+              artists: 'Artists',
+              language: 'Language',
+              support: 'Support',
+              login: 'Login',
+              signup: 'Sign up',
+            },
+            es: {
+              title: 'Fotografia',
+              pickalanguage: 'Elige un idioma',
+              about: 'Donde los artistas crean su futuro. Comienza a compartir tu creatividad con otros alrededor de ti. Haste conocer en este mundo.',
+              meet: 'Conoce a nuestros artistas',
+              artists: 'Artistas',
+              language: 'Idioma',
+              support: 'Apoyo',
+              login: 'Iniciar sesión',
+              signup: 'Registrarse',
+            }
+          }
+        }
+      }
+    ]
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

@@ -24,6 +24,9 @@ module.exports = {
       height: {
         startup: "100vh",
       },
+      width: {
+        144: "30rem",
+      },
       animation: {
         fade: "fade 1.5s ease-out",
         fadeBottom: "fadeBottom 1.5s ease-out",
@@ -63,5 +66,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
