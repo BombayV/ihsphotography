@@ -32,11 +32,15 @@
               </svg>
             </button>
           </div>
-          <LongButton :text="$t('artists')" class="text-zn-900 dark:text-zn-200" />
-          <LongButton :text="$t('language')" class="text-zn-900 dark:text-zn-200" @event="setLangState(true)"/>
-          <LongButton :text="$t('support')" class="text-zn-900 dark:text-zn-200"/>
-          <LongButton :text="$t('login')" class="text-green-500 dark:text-green-400"/>
-          <LongButton :text="$t('signup')" class="text-green-500 dark:text-green-400"/>
+          <LongButton class="text-zn-900 dark:text-zn-200">
+            <NuxtLink class="w-full h-full text-left" to="/artists">{{ $t('artists') }}</NuxtLink>
+          </LongButton>
+          <LongButton class="text-zn-900 dark:text-zn-200" @event="setLangState(true)">{{ $t('language') }}</LongButton>
+          <LongButton class="text-zn-900 dark:text-zn-200">
+            <NuxtLink class="w-full h-full text-left" to="/support">{{ $t('support') }}</NuxtLink>
+          </LongButton>
+          <LongButton class="text-green-500 dark:text-green-400">{{ $t('login') }}</LongButton>
+          <LongButton  class="text-green-500 dark:text-green-400">{{ $t('signup') }}</LongButton>
         </div>
       </div>
     </transition>
@@ -103,7 +107,7 @@ export default Vue.extend({
         {span: 3, duration: '450'},
       ],
       sidebarState: false,
-      langState: true,
+      langState: false,
       locales: [
         {lang: 'en', name: 'English'},
         {lang: 'es', name: 'Español'},
