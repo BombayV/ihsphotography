@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Irvington High School Photography' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bulldog.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
