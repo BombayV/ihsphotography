@@ -8,27 +8,34 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(-50px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        fadeBottom: {
+          "0%": { opacity: 0, transform: "translateY(50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        fadeIn : {
+          "0%": { opacity: 0},
+          "100%": { opacity: 1 },
+        },
         side: {
           "0%": { opacity: 0, transform: "translateY(50px)" },
-
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
       },
       height: {
-        custom: "94%",
-        startup: "90vh",
+        startup: "100vh",
       },
       animation: {
         fade: "fade 1.5s ease-out",
+        fadeBottom: "fadeBottom 1.5s ease-out",
+        fadeIn: "fadeIn 1.5s ease-in",
         side: "side 1.5s ease-out",
       },
       fontSize: {
-        title: "3rem",
-        main: "20em",
+        title: "2.9rem",
       },
       fontFamily: {
-        noto: "'Noto Serif', serif",
-        spline: "'Spline Sans', sans-serif",
+        mont: ["Montserrat", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       textShadow: {
         black: "1px 1px black",
@@ -38,28 +45,19 @@ module.exports = {
       ringWidth: {
         3: "3px",
       },
-      bottom: {
-        test: "21.25rem",
-      },
-      width: {
-        144: "36rem",
-      },
       colors: {
-        "atl-1": "#D8DEE6",
-        "atl-2": "#DDE5ED",
-        "atl-3": "#126dcc",
-        "atl-4": "#244881",
-        "atl-5": "#1E86FC",
-        "atl-6": "#384757",
-        "atl-7": "#101b23",
-        "atl-8": "#1F364F",
-        "atl-9": "#06121F",
-        "atl-0": "#131C26",
-        "atl-10": "#101b23",
-        "atl-11": "#888888",
-        "atl-12": "#020f1a",
-        "atl-13": "#101821",
-      },
+        "zn-50": "#fafafa",
+        "zn-100": "#f4f4f5",
+        "zn-200": "#e4e4e7",
+        "zn-300": "#d4d4d8",
+        "zn-400": "#a1a1aa",
+        "zn-450": "#8e8e93",
+        "zn-500": "#71717a",
+        "zn-600": "#52525b",
+        "zn-700": "#3f3f46",
+        "zn-800": "#27272a",
+        "zn-900": "#18181b",
+      }
     },
   },
   variants: {
