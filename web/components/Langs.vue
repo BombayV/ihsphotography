@@ -28,14 +28,18 @@ import Vue from "vue";
 export default Vue.extend({
   name: 'lang-change',
   props: {
-    locales: {
-      type: Array,
-      required: true
-    },
     langState: {
       type: Boolean,
       required: true
     }
+  },
+  data() {
+    return {
+      locales: [
+        {lang: 'en', name: 'English'},
+        {lang: 'es', name: 'Español'},
+      ]
+    };
   },
 })
 </script>

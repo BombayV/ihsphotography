@@ -14,7 +14,7 @@
       <DarkMode class="fixed bottom-2 right-2"/>
     </div>
     <Sidebar :sidebar-state="sidebarState" @setLangState="setLangState" @closeSidebar="setSidebar"/>
-    <Langs :lang-state="langState" @setLanguage="setLanguage" :locales="locales"/>
+    <Langs :lang-state="langState" @setLanguage="setLanguage"/>
   </div>
 </template>
 
@@ -61,11 +61,7 @@ export default Vue.extend({
         {span: 3, duration: '450'},
       ],
       sidebarState: false,
-      langState: false,
-      locales: [
-        {lang: 'en', name: 'English'},
-        {lang: 'es', name: 'Español'},
-      ]
+      langState: false
     }
   },
   computed: {
