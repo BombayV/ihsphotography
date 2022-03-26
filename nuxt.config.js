@@ -16,7 +16,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
-  loading: false,
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -43,25 +42,45 @@ export default {
           messages: {
             en: {
               title: 'Photography',
-              pickalanguage: 'Pick a language',
+              pick_a_language: 'Pick a language',
               about: 'Where artists create their future. Start sharing your creativity with others around you. Let the world know who you are.',
               meet: 'Meet our artists',
               artists: 'Artists',
               language: 'Language',
               support: 'Support',
               login: 'Login',
-              signup: 'Sign up',
+              logout: 'Log out',
+              signup: 'Register',
+              sign_in: 'Sign in',
+              create_account: 'Create account',
+              forgot: 'Forgot your password?',
+              go_back: 'Go back',
+              email: 'Email',
+              password: 'Password',
+              display_name: 'Display name',
+              sign_header: 'Sign in to IHS Photography',
+              register_header: 'Register to IHS Photography',
             },
             es: {
               title: 'Fotografia',
-              pickalanguage: 'Elige un idioma',
+              pick_a_language: 'Elige un idioma',
               about: 'Donde los artistas crean su futuro. Comienza a compartir tu creatividad con otros alrededor de ti. Haste conocer en este mundo.',
               meet: 'Conoce a nuestros artistas',
               artists: 'Artistas',
               language: 'Idioma',
               support: 'Apoyo',
               login: 'Iniciar sesión',
+              logout: 'Cerra sesion',
               signup: 'Registrarse',
+              sign_in: 'Iniciar',
+              create_account: 'Crear cuenta',
+              forgot: '¿Olvidaste tu contraseña?',
+              go_back: 'Volver',
+              email: 'Correo electrónico',
+              password: 'Contraseña',
+              display_name: 'Nombre de usuario',
+              sign_header: 'Iniciar sesión en IHS Fotografia',
+              register_header: 'Registrarse en IHS Fotografia',
             }
           }
         }

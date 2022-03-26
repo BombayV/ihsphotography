@@ -17,8 +17,12 @@
         <LongButton class="text-zn-900 dark:text-zn-200">
           <NuxtLink class="w-full h-full text-left" to="/support">{{ $t('support') }}</NuxtLink>
         </LongButton>
-        <LongButton class="text-green-500 dark:text-green-400">{{ $t('login') }}</LongButton>
-        <LongButton  class="text-green-500 dark:text-green-400">{{ $t('signup') }}</LongButton>
+        <LongButton class="text-green-500 dark:text-green-400">
+          <NuxtLink class="w-full h-full text-left" to="/login">{{ $t('login') }}</NuxtLink>
+        </LongButton>
+        <LongButton  class="text-green-500 dark:text-green-400">
+          <NuxtLink class="w-full h-full text-left" to="/register">{{ $t('signup') }}</NuxtLink>
+        </LongButton>
       </div>
     </div>
   </transition>

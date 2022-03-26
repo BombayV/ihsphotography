@@ -28,7 +28,6 @@ import Langs from '../components/Langs.vue';
 
 export default Vue.extend({
   name: 'IndexPage',
-  transition: 'page',
   components: {
     DarkMode,
     Sidebar,
@@ -78,7 +77,10 @@ export default Vue.extend({
     if (lang !== null) {
       // @ts-ignore
       this.$i18n.locale = lang
-    }
+    } else if (navigator.language.includes('es')) {
+        // @ts-ignore
+        this.$i18n.locale = 'es'
+      }
   },
   methods: {
     handleClick(e : MouseEvent) {
@@ -134,28 +136,5 @@ export default Vue.extend({
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-.page-enter-active {
-  animation: acrossIn .2s ease-out;
-}
-.page-leave-active {
-  animation: acrossOut .2s ease-in;
-}
-@keyframes acrossIn {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes acrossOut {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(100%, 0, 0);
-  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div v-show="langState" class="transition duration-300 z-30 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-between items-center h-64 w-72 rounded lg:w-144 bg-zn-600 dark:bg-zn-800 shadow-md">
-      <p class="transition duration-150 text-shadow-black text-xl mt-3 font-mont w-full text-center h-10 font-bold text-zn-100 dark:text-zn-100">{{ $t('pickalanguage') }}</p>
+      <p class="transition duration-150 text-shadow-black text-xl mt-3 font-mont w-full text-center h-10 font-bold text-zn-100 dark:text-zn-100">{{ $t('pick_a_language') }}</p>
       <div class="flex flex-col justify-content items-center w-full overflow-hidden h-60 mb-2 mt-2 lg:flex-row lg:flex-1 lg:justify-around lg:flex-wrap lg:w-5/6 lg:m-3 lg:h-48 lg:h-full scrollbar scrollbar-thin">
         <button
           @click="$emit('setLanguage', locale.lang)"
