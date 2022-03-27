@@ -87,7 +87,12 @@ export default Vue.extend({
       }
     },
     registerUser() {
-      console.log(this.userData)
+      try {
+        const resp = this.$axios.post('/api/register', this.userData)
+        console.log(resp)
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 })

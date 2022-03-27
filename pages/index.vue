@@ -9,7 +9,9 @@
       <div class="relative w-full h-startup flex flex-col items-center justify-center">
         <h1 style="font-family: 'Playfair Display', 'serif';" class="lg:text-8xl text-title text-center font-extrabold text-zn-900 mr-24 ml-24 mb-5 dark:text-zn-100 animate-fade transition duration-500">Irvington {{ $t('title') }}</h1>
         <p class="lg:text-xl font-mont text-center mr-4 ml-4 font-medium text-zn-800 dark:text-zn-400 animate-fadeIn transition duration-500">{{ $t('about') }}</p>
-        <button class="lg:text-lg lg:pr-7 lg:pl-7 transition duration-500 bg-green-500 hover:bg-green-400 rounded-md pl-5 pr-5 h-9 font-mont font-semibold text-zn-800 text-sm mt-6 shadow-md border-none animate-fadeBottom"> {{ $t('meet') }}</button>
+        <button class="lg:text-lg transition duration-500 bg-green-500 hover:bg-green-400 rounded-md h-9 lg:h-12 font-mont font-semibold text-zn-800 text-sm mt-6 shadow-md border-none animate-fadeBottom">
+          <NuxtLink to="/artists" class="w-full h-full lg:pr-10 lg:pl-10 pl-5 pr-5">{{ $t('meet') }}</NuxtLink>
+        </button>
       </div>
       <DarkMode class="fixed bottom-2 right-2"/>
     </div>

@@ -11,17 +11,17 @@
           </button>
         </div>
         <LongButton class="text-zn-900 dark:text-zn-200">
-          <NuxtLink class="w-full h-full text-left" to="/artists">{{ $t('artists') }}</NuxtLink>
+          <NuxtLink class="w-full h-full text-left pl-3 pr-3 pt-1.5 pb-1.5" to="/artists">{{ $t('artists') }}</NuxtLink>
         </LongButton>
-        <LongButton class="text-zn-900 dark:text-zn-200" @event="$emit('setLangState', true)">{{ $t('language') }}</LongButton>
+        <LongButton class="text-zn-900 dark:text-zn-200 pl-3 pr-3 pt-1.5 pb-1.5" @event="$emit('setLangState', true)">{{ $t('language') }}</LongButton>
         <LongButton class="text-zn-900 dark:text-zn-200">
-          <NuxtLink class="w-full h-full text-left" to="/support">{{ $t('support') }}</NuxtLink>
+          <NuxtLink class="w-full h-full text-left pl-3 pr-3 pt-1.5 pb-1.5" to="/support">{{ $t('support') }}</NuxtLink>
         </LongButton>
         <LongButton class="text-green-500 dark:text-green-400">
-          <NuxtLink class="w-full h-full text-left" to="/login">{{ $t('login') }}</NuxtLink>
+          <NuxtLink class="w-full h-full text-left pl-3 pr-3 pt-1.5 pb-1.5" to="/login">{{ $t('login') }}</NuxtLink>
         </LongButton>
         <LongButton  class="text-green-500 dark:text-green-400">
-          <NuxtLink class="w-full h-full text-left" to="/register">{{ $t('signup') }}</NuxtLink>
+          <NuxtLink class="w-full h-full text-left pl-3 pr-3 pt-1.5 pb-1.5" to="/register">{{ $t('signup') }}</NuxtLink>
         </LongButton>
       </div>
     </div>

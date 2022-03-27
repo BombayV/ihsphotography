@@ -8,10 +8,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Irvington High School Photography' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Irvington High School Photography',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bulldog.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bulldog.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -31,10 +35,21 @@ export default {
     '@nuxtjs/tailwindcss',
   ],
 
+  serverMiddleware: {
+    '/api': '~/api/index.js',
+  },
+
+  axios: {
+    baseURL: 'http://localhost:4000/api',
+    browserBaseURL: 'http://localhost:4000/api',
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
     [
-      '@nuxtjs/i18n', {
+      '@nuxtjs/i18n',
+      {
         locales: ['en', 'es'],
         defaultLocale: 'en',
         vueI18n: {
@@ -43,7 +58,8 @@ export default {
             en: {
               title: 'Photography',
               pick_a_language: 'Pick a language',
-              about: 'Where artists create their future. Start sharing your creativity with others around you. Let the world know who you are.',
+              about:
+                'Where artists create their future. Start sharing your creativity with others around you. Let the world know who you are.',
               meet: 'Meet our artists',
               artists: 'Artists',
               language: 'Language',
@@ -64,7 +80,8 @@ export default {
             es: {
               title: 'Fotografia',
               pick_a_language: 'Elige un idioma',
-              about: 'Donde los artistas crean su futuro. Comienza a compartir tu creatividad con otros alrededor de ti. Haste conocer en este mundo.',
+              about:
+                'Donde los artistas crean su futuro. Comienza a compartir tu creatividad con otros alrededor de ti. Haste conocer en este mundo.',
               meet: 'Conoce a nuestros artistas',
               artists: 'Artistas',
               language: 'Idioma',
@@ -81,11 +98,11 @@ export default {
               display_name: 'Nombre de usuario',
               sign_header: 'Iniciar sesión en IHS Fotografia',
               register_header: 'Registrarse en IHS Fotografia',
-            }
-          }
-        }
-      }
-    ]
+            },
+          },
+        },
+      },
+    ],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
