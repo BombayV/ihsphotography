@@ -3,12 +3,16 @@
     <div class="absolute w-full h-full bg-zn-400 dark:bg-zn-800 transition duration-500 z-0 overflow-y-scroll flex flex-col items-center">
       <h1 class="font-playfair text-title text-center dark:text-zn-50 mt-5">{{name}}</h1>
       <p class="ml-2.5 mr-2.5 mt-1 text-center font-mont text-md font-md dark:text-zn-400">Some very long description from the user which will be fetch from the database or something along that.</p>
-      <div class="relative w-full px-16 mt-5 flex flex-col flex-wrap items-center justify-center md:hidden">
+      <div class="relative w-full px-20 mt-5 mb-5 flex flex-col flex-wrap items-center justify-center md:hidden">
         <Card v-for="(card, index) in photos" :src="card.src" :key="index" class="w-4/5 mb-5"/>
       </div>
-      <div class="relative w-full px-16 mt-5 flex-col flex-wrap items-center justify-center md:flex">
-        <div>
-
+      <div class="relative hidden w-full px-20 mt-5 mb-5 flex-wrap md:flex">
+        <div v-for="(col, i) in columns" :key="i" class="w-1/3">
+          <div v-for="(card, index) in col" :key="index" class="w-full">
+            <div class="w-full p-2">
+              <Card :src="card.src" :key="index" class="w-full"/>
+            </div>
+          </div>
         </div>
 <!--        <Card v-for="(card, index) in photos" :src="card.src" :key="index" class="w-4/5 mb-5"/>-->
       </div>
@@ -58,20 +62,16 @@ export default Vue.extend({
           id: 3,
         },
         {
-          src: 'https://th.bing.com/th/id/OIP.MfNfqyoCCq_54OP_kLFwsgHaHa?pid=ImgDet&rs=1',
-          id: 4,
-        },
-        {
-          src: 'https://th.bing.com/th/id/R.fd47f061aa83b06592d867e8928389ca?rik=cEhve2t22B%2bPlA&riu=http%3a%2f%2fblog.ioxu.com%2fwp-content%2fuploads%2f2009%2f08%2fdist_02_01_randomsizedartthrow_01.jpg&ehk=%2bd2cLZE4SWFzkiYyKqJ9SrqcHoisqvryam4YYBXfGxI%3d&risl=&pid=ImgRaw&r=0',
-          id: 5,
-        },
-        {
-          src: 'https://th.bing.com/th/id/OIP.NLUPZyaLdYfiLQCdaeM4LQAAAA?pid=ImgDet&rs=1',
-          id: 6,
+          src: 'https://th.bing.com/th/id/OIP.eB-aUEds2pJllCELdBu2rAHaKH?pid=ImgDet&rs=1',
+          id: 3,
         },
         {
           src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          id: 7,
+          id: 2,
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+          id: 2,
         },
         {
           src: 'https://th.bing.com/th/id/R.d4170baf929283fc3510dc78af519e91?rik=Ll6TbrtwU8vbEQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1553173385-682bfe958d31%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=c9dlLb54XluAyPVUpXRidwhYTbJnDG%2f0L7n1PBiHDJc%3d&risl=&pid=ImgRaw&r=0',
@@ -86,24 +86,8 @@ export default Vue.extend({
           id: 3,
         },
         {
-          src: 'https://th.bing.com/th/id/OIP.MfNfqyoCCq_54OP_kLFwsgHaHa?pid=ImgDet&rs=1',
-          id: 4,
-        },
-        {
-          src: 'https://th.bing.com/th/id/R.fd47f061aa83b06592d867e8928389ca?rik=cEhve2t22B%2bPlA&riu=http%3a%2f%2fblog.ioxu.com%2fwp-content%2fuploads%2f2009%2f08%2fdist_02_01_randomsizedartthrow_01.jpg&ehk=%2bd2cLZE4SWFzkiYyKqJ9SrqcHoisqvryam4YYBXfGxI%3d&risl=&pid=ImgRaw&r=0',
-          id: 5,
-        },
-        {
-          src: 'https://th.bing.com/th/id/OIP.NLUPZyaLdYfiLQCdaeM4LQAAAA?pid=ImgDet&rs=1',
-          id: 6,
-        },
-        {
           src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          id: 7,
-        },
-        {
-          src: 'https://th.bing.com/th/id/R.d4170baf929283fc3510dc78af519e91?rik=Ll6TbrtwU8vbEQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1553173385-682bfe958d31%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=c9dlLb54XluAyPVUpXRidwhYTbJnDG%2f0L7n1PBiHDJc%3d&risl=&pid=ImgRaw&r=0',
-          id: 1,
+          id: 2,
         },
         {
           src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
@@ -114,20 +98,24 @@ export default Vue.extend({
           id: 3,
         },
         {
-          src: 'https://th.bing.com/th/id/OIP.MfNfqyoCCq_54OP_kLFwsgHaHa?pid=ImgDet&rs=1',
-          id: 4,
-        },
-        {
-          src: 'https://th.bing.com/th/id/R.fd47f061aa83b06592d867e8928389ca?rik=cEhve2t22B%2bPlA&riu=http%3a%2f%2fblog.ioxu.com%2fwp-content%2fuploads%2f2009%2f08%2fdist_02_01_randomsizedartthrow_01.jpg&ehk=%2bd2cLZE4SWFzkiYyKqJ9SrqcHoisqvryam4YYBXfGxI%3d&risl=&pid=ImgRaw&r=0',
-          id: 5,
-        },
-        {
-          src: 'https://th.bing.com/th/id/OIP.NLUPZyaLdYfiLQCdaeM4LQAAAA?pid=ImgDet&rs=1',
-          id: 6,
+          src: 'https://th.bing.com/th/id/OIP.eB-aUEds2pJllCELdBu2rAHaKH?pid=ImgDet&rs=1',
+          id: 3,
         },
         {
           src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          id: 7,
+          id: 2,
+        },
+        {
+          src: 'https://th.bing.com/th/id/R.d4170baf929283fc3510dc78af519e91?rik=Ll6TbrtwU8vbEQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1553173385-682bfe958d31%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=c9dlLb54XluAyPVUpXRidwhYTbJnDG%2f0L7n1PBiHDJc%3d&risl=&pid=ImgRaw&r=0',
+          id: 1,
+        },
+        {
+          src: 'https://th.bing.com/th/id/R.d4170baf929283fc3510dc78af519e91?rik=Ll6TbrtwU8vbEQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1553173385-682bfe958d31%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=c9dlLb54XluAyPVUpXRidwhYTbJnDG%2f0L7n1PBiHDJc%3d&risl=&pid=ImgRaw&r=0',
+          id: 1,
+        },
+        {
+          src: 'https://th.bing.com/th/id/R.d4170baf929283fc3510dc78af519e91?rik=Ll6TbrtwU8vbEQ&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1553173385-682bfe958d31%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=c9dlLb54XluAyPVUpXRidwhYTbJnDG%2f0L7n1PBiHDJc%3d&risl=&pid=ImgRaw&r=0',
+          id: 1,
         },
       ],
     }
@@ -141,9 +129,15 @@ export default Vue.extend({
   },
   computed: {
     ...mapGetters(['dark']),
-    maxRows() {
-      const length = this.photos.length
-      return 5
+    columns() {
+      let length = Math.ceil(this.photos.length / 3)
+      const newPhotos = [...this.photos]
+      const columns = new Array(3)
+        .fill(0)
+        .map((i) => {
+          return newPhotos.splice(0, length)
+        })
+      return columns
     }
   },
 })

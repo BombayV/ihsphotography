@@ -2,10 +2,10 @@
   <div :class="dark ? 'dark' : 'light'">
     <div @click="handleClick" class="fixed w-full h-full bg-zn-400 dark:bg-zn-800 transition duration-500 z-0"></div>
     <div class="absolute w-full mt-16 flex flex-col justify-start items-center">
-      <h1 class="font-playfair lg:text-8xl text-title tracking-wide">Artists</h1>
-      <span class="text-center mr-2.5 ml-2.5 font-mont lg:mt-5 lg:mr-5 lg:ml-5 lg:text-xl">Meet our artists! Here you will find any person that has registered and was accepted into the gallery. You can press on any of the names below to open their gallery and check their photos.</span>
+      <h1 class="font-playfair lg:text-8xl text-title tracking-wide dark:text-zn-100">Artists</h1>
+      <span class="text-center mr-2.5 ml-2.5 font-mont lg:mt-5 lg:mr-5 lg:ml-5 lg:text-xl dark:text-zn-400">Meet our artists! Here you will find any person that has registered and was accepted into the gallery. You can press on any of the names below to open their gallery and check their photos.</span>
       <div class="mt-5 flex flex-row flex-wrap items-center justify-center gap-5 lg:gap-x-52 font-mont font-semibold text-center w-full">
-        <NuxtLink v-for="(person, index) in users" :to="`/artists/${person.id}`" :key="index" style="flex-basis: 10em" class="text-zn-900 hover:text-green-600 hover:underline transition duration-200">
+        <NuxtLink v-for="(person, index) in users" :to="`/artists/${person.id}`" :key="index" style="flex-basis: 10em" class="text-zn-900 dark:text-zn-450 hover:text-green-600 hover:underline transition duration-200">
           - {{ person.name }}
         </NuxtLink>
       </div>
@@ -44,8 +44,12 @@ export default Vue.extend({
           id: 'Mauricio_Rivera',
         },
         {
-          name: 'Mauricio Rivera',
-          id: 'Mauricio_Rivera',
+          name: 'Ian B',
+          id: 'Ian_B',
+        },
+        {
+          name: 'Izzy',
+          id: 'Izzy',
         }
       ]
     }
