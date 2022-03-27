@@ -142,14 +142,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&family=Playfair+Display:wght@800&display=swap');
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-</style>

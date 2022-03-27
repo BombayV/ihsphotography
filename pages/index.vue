@@ -9,9 +9,7 @@
       <div class="relative w-full h-startup flex flex-col items-center justify-center">
         <h1 style="font-family: 'Playfair Display', 'serif';" class="lg:text-8xl text-title text-center font-extrabold text-zn-900 mr-24 ml-24 mb-5 dark:text-zn-100 animate-fade transition duration-500">Irvington {{ $t('title') }}</h1>
         <p class="lg:text-xl font-mont text-center mr-4 ml-4 font-medium text-zn-800 dark:text-zn-400 animate-fadeIn transition duration-500">{{ $t('about') }}</p>
-        <button class="lg:text-lg transition duration-500 bg-green-500 hover:bg-green-400 rounded-md h-9 lg:h-12 font-mont font-semibold text-zn-800 text-sm mt-6 shadow-md border-none animate-fadeBottom">
-          <NuxtLink to="/artists" class="w-full h-full lg:pr-10 lg:pl-10 pl-5 pr-5">{{ $t('meet') }}</NuxtLink>
-        </button>
+        <NuxtLink to="/artists" class="lg:pr-10 lg:pl-10 lg:pt-2 lg:pb-2 pb-1.5 pt-1.5 pl-5 pr-5 bg-green-500 hover:bg-green-400 duration-500 lg:text-lg transition   rounded-md font-mont font-semibold text-zn-800 text-sm mt-6 shadow-md border-none animate-fadeBottom">{{ $t('meet') }}</NuxtLink>
       </div>
       <DarkMode class="fixed bottom-2 right-2"/>
     </div>
@@ -119,8 +117,6 @@ export default Vue.extend({
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&family=Playfair+Display:wght@800&display=swap');
-
 .slide-fade-enter-active,
 .slide-fade-leave-active{
   transition: all 0.3s ease-out;
