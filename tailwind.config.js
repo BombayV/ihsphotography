@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  purge: ["./**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
@@ -31,7 +31,6 @@ module.exports = {
         fade: "fade 1.5s ease-out",
         fadeBottom: "fadeBottom 1.5s ease-out",
         fadeIn: "fadeIn 1.5s ease-in",
-        side: "side 1.5s ease-out",
       },
       fontSize: {
         title: "2.9rem",
@@ -66,5 +65,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [],
 };

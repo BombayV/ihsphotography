@@ -8,11 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Irvington High School Photography',
-      },
+      { hid: 'description', name: 'description', content: 'Irvington High School Photography' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/bulldog.png' }],
@@ -20,7 +16,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/static/font.css'
+    './static/font.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,27 +27,18 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
 
-  serverMiddleware: {
-    '/api': '~/api/index.js',
-  },
-
-  axios: {
-    baseURL: 'http://localhost:4000/api',
-    browserBaseURL: 'http://localhost:4000/api',
-  },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     [
-      '@nuxtjs/i18n',
-      {
+      '@nuxtjs/i18n', {
         locales: ['en', 'es'],
         defaultLocale: 'en',
         vueI18n: {
@@ -106,6 +93,12 @@ export default {
       },
     ],
   ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

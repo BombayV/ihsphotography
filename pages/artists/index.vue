@@ -18,13 +18,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import { mapGetters } from "vuex";
-import DarkMode from "~/components/DarkMode.vue";
-import Sidebar from "~/components/Sidebar.vue";
-import Navbar from "~/components/Navbar.vue";
-import Langs from "~/components/Langs.vue";
+import DarkMode from "../../components/DarkMode.vue";
+import Sidebar from "../../components/Sidebar.vue";
+import Navbar from "../../components/Navbar.vue";
+import Langs from "../../components/Langs.vue";
 
 export default Vue.extend({
   name: 'SupportPage',
@@ -62,8 +62,8 @@ export default Vue.extend({
     ...mapGetters(['dark'])
   },
   methods: {
-    handleClick(e : MouseEvent) {
-      const target = e.target as HTMLElement
+    handleClick(e) {
+      const target = e.target
       if (target.tagName === 'DIV' || target.tagName === 'SPAN' ||target.tagName === 'P' || target.tagName === 'H1') {
         if (this.sidebarState) {
           this.sidebarState = false
@@ -73,19 +73,19 @@ export default Vue.extend({
         }
       }
     },
-    setSidebar(bool : boolean) {
+    setSidebar(bool) {
       this.sidebarState = bool
       if (this.langState) {
         this.langState = false
       }
     },
-    setLangState(bool : boolean) {
+    setLangState(bool) {
       this.langState = bool
       if (this.sidebarState) {
         this.sidebarState = false
       }
     },
-    setLanguage(lang : string) {
+    setLanguage(lang) {
       localStorage.setItem('lang', lang)
       // @ts-ignore
       this.$i18n.locale = lang

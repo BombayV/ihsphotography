@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import { mapGetters } from "vuex";
 import DarkMode from '../components/DarkMode.vue'
@@ -53,8 +53,8 @@ export default Vue.extend({
   },
   methods: {
     checkEmail() {
-      const username:string = this.userData.username
-      const elem = this.$refs.username as HTMLElement
+      const username = this.userData.username
+      const elem = this.$refs.username
       if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(username)) {
         elem.classList.add('border-red-500', 'ring-2', 'ring-red-500')
         elem.classList.remove('border-zn-600')
@@ -66,8 +66,8 @@ export default Vue.extend({
       }
     },
     checkPassword() {
-      const password:string = this.userData.password
-      const elem = this.$refs.password as HTMLElement
+      const password = this.userData.password
+      const elem = this.$refs.password
       // Check if password is at least 6 characters long, and contains at least one number, one lowercase and one uppercase letter
       if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/.test(password)) {
         elem.classList.add('border-red-500', 'ring-2', 'ring-red-500')

@@ -8,10 +8,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import { mapGetters } from "vuex";
-import DarkMode from "~/components/DarkMode.vue";
+import DarkMode from "../components/DarkMode.vue";
 
 export default Vue.extend({
   name: 'SupportPage',

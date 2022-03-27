@@ -34,17 +34,24 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
-import { mapGetters } from "vuex";
+import {mapGetters} from "vuex";
 import DarkMode from "~/components/DarkMode.vue";
 import Card from "~/components/Card.vue";
 
 export default Vue.extend({
-  name: 'Id',
+  name: 'Artist-Id',
   components: {
     DarkMode,
     Card
+  },
+  async asyncData({params, $http}) {
+    // Replace underscores with spaces
+    const name = await params.id.replace(/_/g, ' ');
+    return {
+      name
+    }
   },
   data() {
     return {
@@ -120,24 +127,16 @@ export default Vue.extend({
       ],
     }
   },
-  async asyncData({params, $http}) {
-    // Replace underscores with spaces
-    const name = params.id.replace(/_/g, ' ');
-    return {
-      name
-    }
-  },
   computed: {
     ...mapGetters(['dark']),
     columns() {
-      let length = Math.ceil(this.photos.length / 3)
+      const length = Math.ceil(this.photos.length / 3)
       const newPhotos = [...this.photos]
-      const columns = new Array(3)
-        .fill(0)
-        .map((i) => {
-          return newPhotos.splice(0, length)
-        })
-      return columns
+      return new Array(3)
+      .fill(0)
+      .map((i) => {
+        return newPhotos.splice(0, length)
+      })
     }
   },
 })
