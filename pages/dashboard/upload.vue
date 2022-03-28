@@ -10,7 +10,7 @@ import { mapGetters } from "vuex";
 import DarkMode from '../../components/DarkMode.vue'
 
 export default Vue.extend({
-  name: 'IndexDashBoard',
+  name: 'UploadDashboard',
   components: {
     DarkMode,
   },
