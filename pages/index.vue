@@ -2,9 +2,9 @@
   <div :class="dark ? 'dark' : 'light'">
     <div @click="handleClick" class="fixed w-full h-full top-0 left-0 bg-zn-400 dark:bg-zn-800 transition duration-500">
       <!--Create a nav bar with tailwindcss-->
-      <div class="fixed w-full h-startup inset-0 p-2 grid grid-cols-12 gap-1.5 transform -skew-y-12 scale-125">
-        <div v-for="(item, index) in grid" :key="index" class="grid-item bg-zn-300 rounded dark:bg-zn-900 opacity-70 animate-pulse" :class="`col-span-${item.span} duration-500`"></div>
-      </div>
+<!--      <div class="fixed w-full h-startup inset-0 p-2 grid grid-cols-12 gap-1.5 transform -skew-y-12 scale-125">-->
+<!--        <div v-for="(item, index) in grid" :key="index" class="grid-item bg-zn-300 rounded dark:bg-zn-900 opacity-70 animate-pulse" :class="`col-span-${item.span} duration-500`"></div>-->
+<!--      </div>-->
       <Navbar @setSidebar="setSidebar"/>
       <div class="relative w-full h-startup flex flex-col items-center justify-center">
         <h1 style="font-family: 'Playfair Display', 'serif';" class="lg:text-8xl text-title text-center font-extrabold text-zn-900 mr-24 ml-24 mb-5 dark:text-zn-100 animate-fade transition duration-500">Irvington {{ $t('title') }}</h1>
